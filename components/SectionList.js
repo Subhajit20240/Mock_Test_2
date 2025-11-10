@@ -2,6 +2,7 @@ import { View } from "react-native";
 import EpisodeCard from "./EpisodeCard";
 
 const bodySystemIcon = require("../assets/images/r.png");
+const diagnosticsIcon = require("../assets/images/medecine.png");
 
 export default function SectionList() {
   return (
@@ -36,7 +37,7 @@ export default function SectionList() {
       <EpisodeCard
         title="Diagnostics"
         color="#F0EBFF"
-        iconUri="https://cdn-icons-png.flaticon.com/512/3242/3242257.png"
+        iconUri={diagnosticsIcon}
         date="29 May"
         count={12}
         episodes={[
