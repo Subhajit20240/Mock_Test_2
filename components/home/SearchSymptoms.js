@@ -7,7 +7,8 @@ export default function SearchSymptoms() {
       <View style={styles.searchContainer}>
         <Ionicons name="search-outline" size={20} color="#777" />
         <TextInput
-          style={styles.input}
+          style={styles.input }
+          
           placeholder="Search for symptom or condition..."
           placeholderTextColor="#888"
         />
@@ -18,9 +19,14 @@ export default function SearchSymptoms() {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.chipContainer}
       >
-        {["Asthma", "Chest pain", "Heart diseases"].map((chip, i) => (
+        {[
+          { label: "Asthma", color: "#F59E0B" },
+          { label: "Chest pain", color: "#10B981" },
+          { label: "Heart diseases", color: "#EF4444" },
+        ].map((chip, i) => (
           <View key={i} style={styles.chip}>
-            <Text style={styles.chipText}>{chip}</Text>
+            <View style={[styles.dot, { backgroundColor: chip.color }]} />
+            <Text style={styles.chipText}>{chip.label}</Text>
           </View>
         ))}
       </ScrollView>
@@ -33,7 +39,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "#fff",
-    borderRadius: 12,
+    borderRadius: 50,
     paddingHorizontal: 14,
     paddingVertical: 10,
     shadowColor: "#000",
@@ -47,6 +53,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: "#333",
     marginLeft: 8,
+    borderRadius:50
   },
   chipContainer: {
     flexDirection: "row",
@@ -54,14 +61,22 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   chip: {
-    backgroundColor: "#FFF4E6",
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
     borderRadius: 20,
     paddingVertical: 7,
     paddingHorizontal: 16,
+    gap: 8,
+  },
+  dot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
   },
   chipText: {
-    color: "#E67E22",
-    fontWeight: "600",
+    color: "#374151",
+    fontWeight: "500",
     fontSize: 13,
   },
 });

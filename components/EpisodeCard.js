@@ -2,11 +2,16 @@ import { FontAwesome, FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { Image, StyleSheet, Text, View } from "react-native";
 
 export default function EpisodeCard({ title, color, iconUri, episodes, date, count }) {
+  const isLocalImage = typeof iconUri === 'number';
+  
   return (
     <View style={[styles.card, { backgroundColor: color }]}>
       {/* Left Icon */}
       <View style={styles.iconContainer}>
-        <Image source={{ uri: iconUri }} style={styles.iconImage} />
+        <Image 
+          source={isLocalImage ? iconUri : { uri: iconUri }} 
+          style={styles.iconImage} 
+        />
       </View>
 
       {/* Right Content */}
@@ -47,7 +52,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 16,
     marginVertical: 8,
-    alignItems: "flex-start",
+    alignItems: "center",
     shadowColor: "#000",
     shadowOpacity: 0.03,
     shadowRadius: 4,

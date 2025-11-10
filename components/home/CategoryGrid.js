@@ -1,19 +1,25 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 
+// ✅ Import local image using require
+const image1 = require("../../assets/images/r.png");
+const image2 = require("../../assets/images/heart.png")
+const image3 = require("../../assets/images/medecine.png")
+
+
 const categories = [
   {
     title: "Body",
-    icon: "https://cdn-icons-png.flaticon.com/512/616/616554.png",
+    icon: image1, // Local image
     color: "#E6F9F5",
   },
   {
     title: "Symptoms",
-    icon: "https://cdn-icons-png.flaticon.com/512/9448/9448683.png",
+    icon: image2,
     color: "#FFE8E8",
   },
   {
     title: "Treatment",
-    icon: "https://cdn-icons-png.flaticon.com/512/3226/3226908.png",
+    icon: image3,
     color: "#EEE9FF",
   },
 ];
@@ -25,7 +31,7 @@ export default function CategoryGrid() {
       <View style={styles.grid}>
         {categories.map((item, index) => (
           <View key={index} style={[styles.card, { backgroundColor: item.color }]}>
-            <Image source={{ uri: item.icon }} style={styles.icon} />
+            <Image source={item.icon} style={styles.icon} />
             <Text style={styles.text}>{item.title}</Text>
           </View>
         ))}
@@ -61,6 +67,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     marginBottom: 8,
+    resizeMode: "contain",
   },
   text: {
     fontWeight: "600",

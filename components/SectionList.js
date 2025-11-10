@@ -1,6 +1,7 @@
-import React from "react";
 import { View } from "react-native";
 import EpisodeCard from "./EpisodeCard";
+
+const bodySystemIcon = require("../assets/images/r.png");
 
 export default function SectionList() {
   return (
@@ -9,7 +10,7 @@ export default function SectionList() {
       <EpisodeCard
         title="Body Systems"
         color="#E6F9F5"
-        iconUri="https://cdn-icons-png.flaticon.com/512/616/616554.png"
+        iconUri={bodySystemIcon}
         date="3 Jun"
         count={12}
         episodes={[
