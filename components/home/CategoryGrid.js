@@ -1,6 +1,5 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 
-// ✅ Import local image using require
 const image1 = require("../../assets/images/r.png");
 const image2 = require("../../assets/images/heart.png")
 const image3 = require("../../assets/images/medecine.png")
@@ -9,7 +8,7 @@ const image3 = require("../../assets/images/medecine.png")
 const categories = [
   {
     title: "Body",
-    icon: image1, // Local image
+    icon: image1, 
     color: "#E6F9F5",
   },
   {

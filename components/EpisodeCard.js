@@ -6,7 +6,7 @@ export default function EpisodeCard({ title, color, iconUri, episodes, date, cou
   
   return (
     <View style={[styles.card, { backgroundColor: color }]}>
-      {/* Left Icon */}
+
       <View style={styles.iconContainer}>
         <Image 
           source={isLocalImage ? iconUri : { uri: iconUri }} 
@@ -14,12 +14,11 @@ export default function EpisodeCard({ title, color, iconUri, episodes, date, cou
         />
       </View>
 
-      {/* Right Content */}
+
       <View style={styles.content}>
-        {/* Title */}
+
         <Text style={styles.title}>{title}</Text>
 
-        {/* Info Row */}
         <View style={styles.infoRow}>
           <Ionicons name="headset-outline" size={13} color="#6b7280" />
           <Text style={styles.infoText}>{count} Episodes</Text>
@@ -27,7 +26,7 @@ export default function EpisodeCard({ title, color, iconUri, episodes, date, cou
           <Text style={styles.infoText}>Updated {date}</Text>
         </View>
 
-        {/* Episode List */}
+  
         <View style={styles.episodeList}>
           {episodes.map((ep, index) => (
             <View key={index} style={styles.episodeRow}>

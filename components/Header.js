@@ -1,4 +1,4 @@
-// components/Header.js
+
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Image, StyleSheet, Text, View } from 'react-native';
 

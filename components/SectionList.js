@@ -7,7 +7,7 @@ const diagnosticsIcon = require("../assets/images/medecine.png");
 export default function SectionList() {
   return (
     <View>
-      {/* Body Systems */}
+ 
       <EpisodeCard
         title="Body Systems"
         color="#E6F9F5"
@@ -20,7 +20,7 @@ export default function SectionList() {
         ]}
       />
 
-      {/* Medical Conditions */}
+
       <EpisodeCard
         title="Medical Conditions"
         color="#FFF4EC"
@@ -33,7 +33,7 @@ export default function SectionList() {
         ]}
       />
 
-      {/* Diagnostics */}
+    
       <EpisodeCard
         title="Diagnostics"
         color="#F0EBFF"

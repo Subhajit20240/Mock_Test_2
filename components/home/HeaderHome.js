@@ -4,7 +4,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 export default function HeaderHome() {
   return (
     <View style={styles.container}>
-      {/* Top Header */}
+
       <View style={styles.headerRow}>
         <View style={styles.logoRow}>
           <FontAwesome5 name="broadcast-tower" size={20} color="#007AFF" />
@@ -16,7 +16,6 @@ export default function HeaderHome() {
         />
       </View>
 
-      {/* Title */}
       <Text style={styles.heading}>
         Understand medical conditions with
       </Text>
