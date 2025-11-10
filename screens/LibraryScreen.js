@@ -21,7 +21,7 @@ export default function LibraryScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#F7FAFF',
+    backgroundColor: '#E0E8F7',
     flex: 1,
     paddingHorizontal: 16,
   },

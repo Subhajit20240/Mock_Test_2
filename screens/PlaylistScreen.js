@@ -3,12 +3,24 @@ import React from 'react'
 
 const PlaylistScreen = () => {
   return (
-    <View>
-      <Text>PlaylistScreen</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Playlists</Text>
     </View>
   )
 }
 
 export default PlaylistScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#E0E8F7',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: '#0B1220',
+  },
+})
